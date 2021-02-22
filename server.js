@@ -1,26 +1,23 @@
-"use strict";
-var express = require("express");
+var http = require("http");
 
-//initialize express server
-var app = express();
+http
+  .createServer(function (req, res) {
+    // Homepage
+    if (req.url === "/") {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.end("Welcome to the homepage!");
+    }
 
-//defining port number
-const port = 3000;
-const bodyParser = require("body-parser");
+    // About page
+    else if (req.url === "/about") {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.end("Welcome to the about page!");
+    }
 
-app.use(bodyParser);
-
-//end points
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-
-app.get("/getPost", (req, res) => {
-  res.send("Hello World!");
-});
-
-// start server
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-  console.log(__dirname);
-});
+    // 404'd!
+    else {
+      res.writeHead(404, { "Content-Type": "text/plain" });
+      res.end("404 error! File not found.");
+    }
+  })
+  .listen(1337, "localhost");
