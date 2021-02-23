@@ -9,12 +9,7 @@ const router = express.Router();
 
 app.use(cors());
 
-var corsOptions = {
-  origin: "http://localhost:3000/",
-  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
-};
-
-router.get("/", cors(), (req, res) => {
+router.get("/", (req, res) => {
   res.json({
     hello: "hi",
   });
