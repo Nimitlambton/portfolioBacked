@@ -15,6 +15,13 @@ router.get("/", (req, res) => {
   });
 });
 
+router.get("/jumbtron", (req, res) => {
+  res.json({
+    h1: "Hi 👋 , Thanks for Stoping by",
+    p: "Currently learning MERN Stack & ReactNative ",
+  });
+});
+
 app.use("/.netlify/functions/api", router);
 
 module.exports.handler = serverless(app);
