@@ -34,7 +34,7 @@ router.get("/projects", (req, res) => {
           "This is my first project, that is build on React.js. It can be used to generate cool meme and edit images",
         repolink: "https://github.com/Nimitlambton/MN",
         DeployedLink: "https://meme-nator.netlify.app",
-        thumbnail: Background,
+        thumbnail: "Background",
         status: "completed",
       },
       {
@@ -45,7 +45,7 @@ router.get("/projects", (req, res) => {
           "This is react based responsive Web App , used to showcase all the projects that are created till now ",
         repolink: "https://github.com/Nimitlambton/NimitpamnaniProfolio",
         DeployedLink: "https://nimitpamnani.rocks/#home",
-        thumbnail: protfolioImg,
+        thumbnail: "protfolioImg",
       },
       {
         title: "The Weather App",
@@ -53,7 +53,7 @@ router.get("/projects", (req, res) => {
         desc:
           "This is weatherApp based on React.js , it can be used to fetch weather of any City in the world 🌏 ",
         repolink: "https://github.com/Nimitlambton/weatherApp",
-        thumbnail: Weather,
+        thumbnail: "Weather",
         DeployedLink: "https://nimit-theweatherapp.netlify.app/",
         status: "completed",
       },
