@@ -19,6 +19,8 @@ router.get("/jumbtron", (req, res) => {
   res.json({
     h1: "Hi 👋 , Thanks for Stoping by",
     p: "Currently learning MERN Stack & ReactNative ",
+    p2:
+      "  I am Nimit pamnani ✨ Mobile & web developer 💻 || Amateur Photographer 📸 . ",
   });
 });
 
