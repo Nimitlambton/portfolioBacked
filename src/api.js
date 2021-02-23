@@ -8,10 +8,10 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
   res.json({
-    hello: "h1",
+    hello: "hi",
   });
 });
 
 app.use("/.netlify/functions/api", router);
 
-module.exports.handles = serverless(app);
+module.exports.handler = serverless(app);
