@@ -12,12 +12,9 @@
     Access-Control-Allow-Origin = "*"
 
 
-
-
 [build]
 
 functions  = "functions"
-
 
 
   Access-Control-Allow-Origin: *
