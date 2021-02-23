@@ -10,6 +10,7 @@ const router = express.Router();
 app.use(cors());
 
 router.get("/", (req, res) => {
+  res.header(cors);
   res.json({
     hello: "hi",
   });
