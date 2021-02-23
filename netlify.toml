@@ -17,3 +17,7 @@
 [build]
 
 functions  = "functions"
+
+
+
+  Access-Control-Allow-Origin: *
