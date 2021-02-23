@@ -14,7 +14,7 @@ var corsOptions = {
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
-router.get("/", cors(corsOptions), (req, res) => {
+router.get("/", cors(), (req, res) => {
   res.json({
     hello: "hi",
   });
