@@ -4,7 +4,6 @@ const serverless = require("serverless-http");
 var cors = require("cors");
 const app = express();
 const router = express.Router();
-const imageToBase64 = require("image-to-base64");
 
 app.use(cors());
 
