@@ -40,44 +40,44 @@ router.get("/projects", (req, res) => {
         ),
         status: "completed",
       },
-      // {
-      //   title: "Personal portfolio",
-      //   status: "completed",
-      //   projectId: 2,
-      //   desc:
-      //     "This is react based responsive Web App , used to showcase all the projects that are created till now ",
-      //   repolink: "https://github.com/Nimitlambton/NimitpamnaniProfolio",
-      //   DeployedLink: "https://nimitpamnani.rocks/#home",
+      {
+        title: "Personal portfolio",
+        status: "completed",
+        projectId: 2,
+        desc:
+          "This is react based responsive Web App , used to showcase all the projects that are created till now ",
+        repolink: "https://github.com/Nimitlambton/NimitpamnaniProfolio",
+        DeployedLink: "https://nimitpamnani.rocks/#home",
 
-      //   //this function passes  url of a image that are kept in assest folder  which further converts image into base64 data.
-      //   thumbnail: base64_encode(
-      //     __dirname +
-      //       "Users/nimi/Desktop/javascriptws/reactproj/porfolinbackend/portfolioBack/src/Assests/portfolio.png"
-      //   ),
-      // },
-      // {
-      //   title: "The Weather App",
-      //   projectId: 3,
-      //   desc:
-      //     "This is weatherApp based on React.js , it can be used to fetch weather of any City in the world 🌏 ",
-      //   repolink: "https://github.com/Nimitlambton/weatherApp",
+        //this function passes  url of a image that are kept in assest folder  which further converts image into base64 data.
+        thumbnail: base64_encode(
+          __dirname +
+            "Users/nimi/Desktop/javascriptws/reactproj/porfolinbackend/portfolioBack/src/Assests/portfolio.png"
+        ),
+      },
+      {
+        title: "The Weather App",
+        projectId: 3,
+        desc:
+          "This is weatherApp based on React.js , it can be used to fetch weather of any City in the world 🌏 ",
+        repolink: "https://github.com/Nimitlambton/weatherApp",
 
-      //   //this function passes  url of a image that are kept in assest folder  which further converts image into base64 data.
-      //   thumbnail: base64_encode(
-      //     __dirname +
-      //       "Users/nimi/Desktop/javascriptws/reactproj/porfolinbackend/portfolioBack/src/Assests/eg.png"
-      //   ),
-      //   DeployedLink: "https://nimit-theweatherapp.netlify.app/",
-      //   status: "completed",
-      // },
-      // {
-      //   title: "MemeNator",
-      //   projectId: 4,
-      //   desc: "This is my first project, that is build on React.js",
-      //   thumbnail: "",
-      //   repolink: "",
-      //   status: "",
-      // },
+        //this function passes  url of a image that are kept in assest folder  which further converts image into base64 data.
+        thumbnail: base64_encode(
+          __dirname +
+            "Users/nimi/Desktop/javascriptws/reactproj/porfolinbackend/portfolioBack/src/Assests/eg.png"
+        ),
+        DeployedLink: "https://nimit-theweatherapp.netlify.app/",
+        status: "completed",
+      },
+      {
+        title: "MemeNator",
+        projectId: 4,
+        desc: "This is my first project, that is build on React.js",
+        thumbnail: "",
+        repolink: "",
+        status: "",
+      },
     ],
   });
 });
