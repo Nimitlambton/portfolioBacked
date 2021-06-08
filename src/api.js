@@ -4,6 +4,7 @@ const serverless = require("serverless-http");
 var cors = require("cors");
 const app = express();
 const router = express.Router();
+const imageToBase64 = require("image-to-base64");
 
 app.use(cors());
 
@@ -34,14 +35,9 @@ router.get("/projects", (req, res) => {
         DeployedLink: "https://meme-nator.netlify.app",
 
         //this function passes  url of a image that are kept in assest folder  which further converts image into base64 data.
-        thumbnail: `data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUA
-        AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
-            9TXL0Y4OHwAAAABJRU5ErkJggg==`,
-
-        // base64_encode(
-        //   __dirname +
-        //     "Users/nimi/Desktop/javascriptws/reactproj/porfolinbackend/portfolioBack/src/Assests/freelance.png"
-        // ),
+        thumbnail: base64_encode(),
+        // __dirname +
+        //   "Users/nimi/Desktop/javascriptws/reactproj/porfolinbackend/portfolioBack/src/Assests/freelance.png"
         status: "completed",
       },
       // {
@@ -87,14 +83,16 @@ router.get("/projects", (req, res) => {
 });
 
 //function coverts image that are kept in Assests folder data top base64
-function base64_encode(file) {
+function base64_encode() {
+  return "helloworld";
+
   // read binary data
-  var bitmap = fs.readFileSync(file);
-  // convert binary data to base64 encoded string
+  // var bitmap = fs.readFileSync(file);
+  // // convert binary data to base64 encoded string
 
-  var abc = new Buffer(bitmap).toString("base64");
+  // var abc = new Buffer(bitmap).toString("base64");
 
-  return "data:image/png;base64," + abc;
+  // return "data:image/png;base64," + abc;
 }
 
 app.use("/.netlify/functions/api", router);
