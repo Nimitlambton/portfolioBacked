@@ -34,10 +34,14 @@ router.get("/projects", (req, res) => {
         DeployedLink: "https://meme-nator.netlify.app",
 
         //this function passes  url of a image that are kept in assest folder  which further converts image into base64 data.
-        thumbnail: base64_encode(
-          __dirname +
-            "Users/nimi/Desktop/javascriptws/reactproj/porfolinbackend/portfolioBack/src/Assests/freelance.png"
-        ),
+        thumbnail: `data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUA
+        AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
+            9TXL0Y4OHwAAAABJRU5ErkJggg==`,
+
+        // base64_encode(
+        //   __dirname +
+        //     "Users/nimi/Desktop/javascriptws/reactproj/porfolinbackend/portfolioBack/src/Assests/freelance.png"
+        // ),
         status: "completed",
       },
       // {
