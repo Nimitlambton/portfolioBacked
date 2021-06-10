@@ -23,7 +23,7 @@ router.get("/jumbtron", (req, res) => {
   });
 });
 router.get("/projects", (req, res) => {
-  console.log();
+  console.log("helloworld");
   res.json({
     projectsList: [
       {
