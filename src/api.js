@@ -7,8 +7,6 @@ const router = express.Router();
 var path = require("path");
 app.use(cors());
 
-app.use("/static", express.static(path.join(__dirname, "/src/public")));
-
 router.get("/", (req, res) => {
   res.json({
     hello: "hi",
@@ -33,9 +31,9 @@ router.get("/projects", (req, res) => {
           "This is my first project, that is build on React.js. It can be used to generate cool meme and edit images",
         repolink: "https://github.com/Nimitlambton/MN",
         DeployedLink: "https://meme-nator.netlify.app",
-
+        //mjjj
         //this function passes  url of a image that are kept in assest folder  which further converts image into base64 data.
-        thumbnail: path,
+        thumbnail: "path",
         status: "completed",
       },
       // {
