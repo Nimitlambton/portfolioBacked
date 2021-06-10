@@ -4,7 +4,10 @@ const serverless = require("serverless-http");
 var cors = require("cors");
 const app = express();
 const router = express.Router();
+var path = require("path");
 app.use(cors());
+
+app.use("/static", express.static(path.join(__dirname, "/src/public")));
 
 router.get("/", (req, res) => {
   res.json({
@@ -20,6 +23,7 @@ router.get("/jumbtron", (req, res) => {
   });
 });
 router.get("/projects", (req, res) => {
+  console.log("helloworld");
   res.json({
     projectsList: [
       {
@@ -31,8 +35,7 @@ router.get("/projects", (req, res) => {
         DeployedLink: "https://meme-nator.netlify.app",
 
         //this function passes  url of a image that are kept in assest folder  which further converts image into base64 data.
-        thumbnail: process.cwd(),
-        //base64_encode(process.cwd() + "/src/Assests/freelance.png"),
+        thumbnail: path,
         status: "completed",
       },
       // {
