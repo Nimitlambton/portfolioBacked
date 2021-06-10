@@ -4,17 +4,17 @@ const serverless = require("serverless-http");
 var cors = require("cors");
 const app = express();
 const router = express.Router();
-
+var path = require("path");
 app.use(cors());
+
+app.use("/static", express.static(path.join(__dirname, "/src/public")));
 
 router.get("/", (req, res) => {
   res.json({
     hello: "hi",
   });
 });
-
 router.get("/jumbtron", (req, res) => {
-  //hello
   res.json({
     h1: "Hi 👋 , Thanks for Stoping by",
     p: "Currently learning MERN Stack & ReactNative ",
@@ -22,12 +22,12 @@ router.get("/jumbtron", (req, res) => {
       "  I am Nimit pamnani ✨ Mobile & web developer 💻 || Amateur Photographer 📸 . ",
   });
 });
-
 router.get("/projects", (req, res) => {
+  console.log("hey this is your dir" + __dirname);
   res.json({
     projectsList: [
       {
-        title: "MemeNator",
+        title: "MemeNator12345",
         projectId: 1,
         desc:
           "This is my first project, that is build on React.js. It can be used to generate cool meme and edit images",
@@ -35,13 +35,7 @@ router.get("/projects", (req, res) => {
         DeployedLink: "https://meme-nator.netlify.app",
 
         //this function passes  url of a image that are kept in assest folder  which further converts image into base64 data.
-        thumbnail:
-          __dirname +
-          "Users/nimi/Desktop/javascriptws/reactproj/porfolinbackend/portfolioBack/src/Assests/freelance.png",
-
-        // base64_encode(),
-        // __dirname +
-        //   "Users/nimi/Desktop/javascriptws/reactproj/porfolinbackend/portfolioBack/src/Assests/freelance.png"
+        thumbnail: `base64_encode(__dirname, "/src/public/eg.png")`,
         status: "completed",
       },
       // {
@@ -87,16 +81,14 @@ router.get("/projects", (req, res) => {
 });
 
 //function coverts image that are kept in Assests folder data top base64
-function base64_encode() {
-  return "helloworld";
+function base64_encode(file) {
+  //  read binary data
+  var bitmap = fs.readFileSync(file);
+  // convert binary data to base64 encoded string
 
-  // read binary data
-  // var bitmap = fs.readFileSync(file);
-  // // convert binary data to base64 encoded string
+  var abc = new Buffer(bitmap).toString("base64");
 
-  // var abc = new Buffer(bitmap).toString("base64");
-
-  // return "data:image/png;base64," + abc;
+  return "data:image/png;base64," + abc;
 }
 
 app.use("/.netlify/functions/api", router);
