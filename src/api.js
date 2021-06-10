@@ -20,6 +20,8 @@ router.get("/jumbtron", (req, res) => {
   });
 });
 router.get("/projects", (req, res) => {
+  console.log(process.cwd() + "/src/eg2");
+
   res.json({
     projectsList: [
       {
@@ -31,7 +33,7 @@ router.get("/projects", (req, res) => {
         DeployedLink: "https://meme-nator.netlify.app",
 
         //this function passes  url of a image that are kept in assest folder  which further converts image into base64 data.
-        thumbnail: __dirname,
+        thumbnail: base64_encode(process.cwd() + "/src/eg2.jpeg"),
         //base64_encode(process.cwd() + "/src/Assests/freelance.png"),
         status: "completed",
       },
