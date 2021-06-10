@@ -20,8 +20,6 @@ router.get("/jumbtron", (req, res) => {
   });
 });
 router.get("/projects", (req, res) => {
-  console.log(process.cwd() + "/src/eg2");
-
   res.json({
     projectsList: [
       {
