@@ -26,6 +26,7 @@ router.get("/projects", (req, res) => {
     projectsList: [
       {
         title: "MemeNator12345",
+        title: "MemeNator12345",
         // projectId: 1,
         // desc:
         //   "This is my first project, that is build on React.js. It can be used to generate cool meme and edit images",
