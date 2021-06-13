@@ -33,7 +33,7 @@ router.get("/projects", (req, res) => {
         DeployedLink: "https://meme-nator.netlify.app",
         //mjjj
         //this function passes  url of a image that are kept in assest folder  which further converts image into base64 data.
-        thumbnail: "path",
+        thumbnail: process.cwd() + "/",
         status: "completed",
       },
       // {
