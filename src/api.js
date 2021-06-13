@@ -31,11 +31,7 @@ router.get("/projects", (req, res) => {
           "This is my first project, that is build on React.js. It can be used to generate cool meme and edit images",
         repolink: "https://github.com/Nimitlambton/MN",
         DeployedLink: "https://meme-nator.netlify.app",
-        //mjjj
-        //this function passes  url of a image that are kept in assest folder  which further converts image into base64 data.
-        thumbnail: base64_encode(
-          "https://80ded86b-e216-4316-a39b-300f1e8a59ae.netlify.app/.netlify/large-media"
-        ),
+        thumbnail: `base64_encode(    "https://80ded86b-e216-4316-a39b-300f1e8a59ae.netlify.app/.netlify/large-media")`,
         status: "completed",
       },
       // {
