@@ -1,4 +1,6 @@
 [build]
 functions = "functions"
 
-publish = "build-output/"
+
+
+# Settings in the [build]
